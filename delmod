@@ -1,0 +1,12 @@
+#!/bin/sh
+module="chardev_test"
+device="chardev_test"
+mode="664"
+
+echo "Remove device from /dev"
+rm -f /dev/${device}
+
+echo "Remove device from /proc"
+/sbin/rmmod ./test.ko -f
+
+
